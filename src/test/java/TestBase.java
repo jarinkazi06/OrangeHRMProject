@@ -27,6 +27,7 @@ public class TestBase {
     }
 
     public LoginPage startLoginPage(){
+
         return PageFactory.initElements(driver, LoginPage.class);
     }
 

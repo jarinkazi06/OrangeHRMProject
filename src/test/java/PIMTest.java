@@ -8,13 +8,18 @@ import pages.LoginPage;
 
 import java.time.Duration;
 
-public class FirstTest extends TestBase{
+public class PIMTest extends TestBase{
 
    // WebDriver driver;
 
     @Test
     public void test1() throws InterruptedException {
-        startLoginPage().loginToPIMPage();
+        startLoginPage().
+                loginToPIMPage()
+                .searchEmployeeId("0083")
+                .validateFirstAndLastName("Joe","Root");
+
+
         Thread.sleep(5000);
     }
 
